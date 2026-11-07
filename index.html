@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Familia García Gil</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Barra Superior Negra -->
+  <nav class="top-bar">
+    <div class="top-bar-content">
+      <span class="brand-name">Familia García Gil</span>
+    </div>
+  </nav>
+
+  <header class="header">
+    <span class="subtitle">BIENVENIDOS A NUESTRO HOGAR</span>
+    <h1 class="title">Familia García Gil</h1>
+    <div class="divider"></div>
+  </header>
+
+  <main class="container">
+    
+    <!-- Sección de Valores y Principios -->
+    <section class="section">
+      <h2 class="section-title">Valores y Principios</h2>
+      <p class="section-description">Los cimientos sobre los cuales construimos nuestro hogar y fortalecemos nuestra unión cada día.</p>
+      
+      <div class="grid grid-values">
+        <article class="card value-card">
+          <div class="icon">♥</div>
+          <h3>Amor Incondicional</h3>
+          <p>Nos apoyamos en todo momento, celebrando los logros de cada uno y brindando refugio en la adversidad.</p>
+        </article>
+
+        <article class="card value-card">
+          <div class="icon">✦</div>
+          <h3>Respeto y Escucha</h3>
+          <p>Valoramos la individualidad, la opinión y las emociones de cada integrante del hogar.</p>
+        </article>
+
+        <article class="card value-card">
+          <div class="icon">☀</div>
+          <h3>Trabajo en Equipo</h3>
+          <p>Construimos nuestro futuro juntos, colaborando con responsabilidad, empatía y alegría.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Sección de Integrantes -->
+    <section class="section">
+      <h2 class="section-title">Nuestra Familia</h2>
+      <p class="section-description">Las personas que llenan de vida, historias y amor nuestro hogar.</p>
+
+      <!-- Botones de Filtro Interactivo (JS) -->
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="padres">Padres</button>
+        <button class="filter-btn" data-filter="hijos">Hijos</button>
+        <button class="filter-btn" data-filter="nietos">Nietos</button>
+      </div>
+
+      <!-- Contenedor Flex para centrar la última tarjeta -->
+      <div class="members-flex" id="members-grid">
+        
+        <!-- Mamá -->
+        <article class="card member-card" data-category="padres">
+          <div class="photo-wrapper">
+            <img src="mama.jpg" alt="Carmen Gil" class="photo-mama">
+          </div>
+          <div class="member-info">
+            <span class="role">Mamá</span>
+            <h3>Carmen Gil</h3>
+            <p>El pilar fundamental de nuestra familia, brindando calidez, sabiduría y un amor incondicional cada día.</p>
+          </div>
+        </article>
+
+        <!-- Papá -->
+        <article class="card member-card" data-category="padres">
+          <div class="photo-wrapper">
+            <img src="papa.jpg" alt="Juan García" class="photo-papa">
+          </div>
+          <div class="member-info">
+            <span class="role">Papá</span>
+            <h3>Juan García</h3>
+            <p>Ejemplo de trabajo, firmeza y protección constante que fortalece las raíces de nuestro hogar.</p>
+          </div>
+        </article>
+
+        <!-- Hijo -->
+        <article class="card member-card" data-category="hijos">
+          <div class="photo-wrapper">
+            <img src="hijo.jpg" alt="Juandry García" class="photo-hijo">
+          </div>
+          <div class="member-info">
+            <span class="role">Hijo</span>
+            <h3>Juandry García</h3>
+            <p>Representa el entusiasmo, el compromiso y el impulso para alcanzar grandes metas familiares.</p>
+          </div>
+        </article>
+
+        <!-- Hija -->
+        <article class="card member-card" data-category="hijos">
+          <div class="photo-wrapper">
+            <img src="hija.jpg" alt="Juana García" class="photo-hija">
+          </div>
+          <div class="member-info">
+            <span class="role">Hija</span>
+            <h3>Juana García</h3>
+            <p>Llena de alegría y sensibilidad nuestro hogar, aportando valor y armonía a la familia.</p>
+          </div>
+        </article>
+
+        <!-- Nieta 1 -->
+        <article class="card member-card" data-category="nietos">
+          <div class="photo-wrapper">
+            <img src="nieta1.jpg" alt="Fabiana" class="photo-nieta1">
+          </div>
+          <div class="member-info">
+            <span class="role">Nieta</span>
+            <h3>Fabiana</h3>
+            <p>Alegría, dulzura y luz en nuestra casa, iluminando las reuniones con su sonrisa.</p>
+          </div>
+        </article>
+
+        <!-- Nieto 1 -->
+        <article class="card member-card" data-category="nietos">
+          <div class="photo-wrapper">
+            <img src="nieto1.jpg" alt="Fraybet Da'Silva" class="photo-nieto1">
+          </div>
+          <div class="member-info">
+            <span class="role">Nieto</span>
+            <h3>Fraybet Da'Silva</h3>
+            <p>Creatividad, energía pura y curiosidad constante que llena de vida el futuro de la familia.</p>
+          </div>
+        </article>
+
+        <!-- Nieto 2 (Centrado en la última fila) -->
+        <article class="card member-card" data-category="nietos">
+          <div class="photo-wrapper">
+            <img src="nieto2.jpg" alt="Carlos" class="photo-nieto2">
+          </div>
+          <div class="member-info">
+            <span class="role">Nieto</span>
+            <h3>Carlos</h3>
+            <p>Entusiasmo, carisma y juventud que traen orgullo y felicidad a la Familia García Gil.</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Modal Flotante para Ampliar Fotos (JS) -->
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox-close" id="lightbox-close">&times;</span>
+    <img class="lightbox-img" id="lightbox-img" src="" alt="Vista ampliada">
+    <div class="lightbox-caption" id="lightbox-caption"></div>
+  </div>
+
+  <!-- Frase Motivacional al pie -->
+  <footer class="footer">
+    <div class="quote-container">
+      <span class="quote-mark">“</span>
+      <blockquote class="quote-text">
+        Una familia unida es el tesoro más valioso, el refugio más seguro y la mayor fuente de inspiración para alcanzar cualquier meta.
+      </blockquote>
+      <cite class="quote-author">— Familia García Gil</cite>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
