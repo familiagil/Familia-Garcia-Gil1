@@ -6,6 +6,7 @@
   --card-bg: #fafafa;
   --accent-color: #0f172a;
   --accent-light: #f8fafc;
+  --gold-color: #d4af37;
   --radius-sm: 8px;
   --radius-md: 18px;
   --radius-lg: 24px;
@@ -145,7 +146,7 @@ body {
   color: #ffffff;
 }
 
-/* Grillas y Flexbox */
+/* Grilla de Valores */
 .grid {
   display: grid;
   gap: 2rem;
@@ -155,12 +156,23 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
-/* Contenedor Flex para que la última tarjeta sobrante se centre automáticamente */
-.members-flex {
+/* Estructura por Filas Separadas */
+.family-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.group-row {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
+  width: 100%;
+}
+
+.group-row.hidden {
+  display: none !important;
 }
 
 /* Estilo Base de Tarjetas */
@@ -170,6 +182,7 @@ body {
   border-radius: var(--radius-md);
   padding: 2rem;
   transition: var(--transition);
+  position: relative;
 }
 
 .card:hover {
@@ -207,7 +220,7 @@ body {
   font-size: 0.95rem;
 }
 
-/* Tarjetas de Integrantes adaptadas para Flex */
+/* Tarjetas de Integrantes */
 .member-card {
   padding: 0;
   border-radius: var(--radius-md);
@@ -224,6 +237,44 @@ body {
   display: none !important;
 }
 
+/* Tarjetas Especiales para los Padres con Alas Doradas */
+.parent-card {
+  overflow: visible !important;
+}
+
+.angel-wing {
+  position: absolute;
+  top: 40px;
+  width: 65px;
+  height: 130px;
+  color: var(--gold-color);
+  pointer-events: none;
+  z-index: 5;
+  filter: drop-shadow(0 2px 8px rgba(212, 175, 55, 0.25));
+  transition: var(--transition);
+}
+
+.wing-left {
+  left: -45px;
+}
+
+.wing-right {
+  right: -45px;
+}
+
+.angel-wing svg {
+  width: 100%;
+  height: 100%;
+}
+
+.parent-card:hover .wing-left {
+  transform: translateX(-5px) rotate(-3deg);
+}
+
+.parent-card:hover .wing-right {
+  transform: translateX(5px) rotate(3deg);
+}
+
 .photo-wrapper {
   width: 100%;
   height: 320px;
@@ -231,19 +282,19 @@ body {
   margin: 0;
   background-color: #f1f5f9;
   overflow: hidden;
+  border-top-left-radius: var(--radius-md);
+  border-top-right-radius: var(--radius-md);
 }
 
-/* Configuración de encuadre exacto */
 .photo-wrapper img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  border-radius: 0;
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Encuadre personalizado */
+/* Encuadre focal personalizado */
 .photo-mama   { object-position: center 15%; }
 .photo-papa   { object-position: center 15%; }
 .photo-hijo   { object-position: center 20%; }
